@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
 import Layout from "./components/Layout";
-//import Navbar from "./components/Navbar";
 import Gallery from "./pages/Gallery";
 import AddPicture from "./pages/AddPicture";
 
