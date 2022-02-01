@@ -1,4 +1,5 @@
 import PictureList from "../components/pics/PictureList";
+import pictures from "../assets/data/db.json";
 
 function Gallery() {
   const initialDb = [
