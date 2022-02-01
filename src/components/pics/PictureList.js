@@ -1,42 +1,26 @@
-//import Picture from "./Picture";
-
-function PictureList(props) {
-  const pictures = props.pictures;
-  const title = props.title;
-
-  return (
-    <div>
-      <h2>{title}</h2>
-      <ul>
-        {props.pictures.map((item) => {
-          return (
-            <div key={item.id}>
-              image={item.image}
-              title={item.title}
-              user={item.user}
-              description={item.description}
-            </div>
-          );
-        })}
-      </ul>
-    </div>
-  );
-}
+import Picture from "./Picture";
+import styles from "./PictureList.module.css";
 
 /*
-const PictureList = ({ pictures, onDelete }) => {
-  return (
-    <>
-      {pictures.map((item) => (
-        <Picture 
-        key={item.id} 
-        item={item} 
-        onDelete={onDelete} />
-        //passing items as props and also delete function
-      ))}
-    </>
-  );
-};
+const pictures = props.pictures;
+  const title = props.title;
 */
+
+function PictureList(props) {
+  return (
+    <ul className={styles.list}>
+      {props.pictures.map((item) => (
+        <Picture
+          key={item.id}
+          item={item}
+          image={item.image}
+          title={item.title}
+          user={item.user}
+          description={item.description}
+        />
+      ))}
+    </ul>
+  );
+}
 
 export default PictureList;
