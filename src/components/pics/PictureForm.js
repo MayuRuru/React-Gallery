@@ -2,9 +2,10 @@ import { useState } from "react";
 import styles from "./PictureForm.module.css";
 import Card from "../ui/Card";
 
-//function AddPicture(props){}
-
+function PictureForm() {
+  /*
 const AddPicture = ({ onAdd }) => {
+
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
   const [user, setUser] = useState("");
@@ -20,6 +21,7 @@ const AddPicture = ({ onAdd }) => {
     setUser("");
     setDescription("");
   };
+  */
 
   return (
     <Card>
@@ -72,6 +74,6 @@ const AddPicture = ({ onAdd }) => {
       </form>
     </Card>
   );
-};
+}
 
-export default AddPicture;
+export default PictureForm;

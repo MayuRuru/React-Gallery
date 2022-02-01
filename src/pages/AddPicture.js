@@ -1,7 +1,13 @@
-import { useState } from "react";
+//import { useState } from "react";
 
-//function AddPicture(){}
+function AddPicture() {
+  return;
+  <section>
+    <h1>Add New Picture</h1>
+  </section>;
+}
 
+/*
 const AddPicture = ({ onAdd }) => {
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
@@ -65,5 +71,6 @@ const AddPicture = ({ onAdd }) => {
     </form>
   );
 };
+*/
 
 export default AddPicture;
