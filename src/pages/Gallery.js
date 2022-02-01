@@ -1,7 +1,6 @@
 //import PictureList from "../components/PictureList";
 //import { useState } from "react";
 
-/*
 const initialDb = [
   {
     id: 1,
@@ -22,6 +21,7 @@ const initialDb = [
 const Gallery = () => {
   const [pictures, setPictures] = useState([initialDb]);
 
+  /*
   //add pic:
 
   const addPicture = (item) => {
@@ -35,6 +35,7 @@ const Gallery = () => {
   const deletePicture = (id) => {
     setPictures(pictures.filter((item) => item.id !== id));
   };
+  */
 
   return (
     <>
@@ -42,7 +43,8 @@ const Gallery = () => {
     </>
   );
 };
-*/
+
+/*
 
 const Gallery = () => {
   return (
@@ -52,4 +54,5 @@ const Gallery = () => {
   );
 };
 
+*/
 export default Gallery;
