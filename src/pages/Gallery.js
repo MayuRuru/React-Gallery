@@ -41,7 +41,7 @@ const Gallery = () => {
 
   return (
     <div>
-      <PictureList pictures={pictures} />
+      <PictureList pictures={pictures} title="Gallery" />
     </div>
     /*
     <>

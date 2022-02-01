@@ -2,16 +2,19 @@
 
 function PictureList(props) {
   return (
-    <ul>
-      {props.items.map((item) => (
-        <div key={item.id}>
-          image={item.image}
-          title={item.title}
-          user={item.user}
-          description={item.description}
-        </div>
-      ))}
-    </ul>
+    <div>
+      <h2>{title}</h2>
+      <ul>
+        {props.items.map((item) => (
+          <div key={item.id}>
+            image={item.image}
+            title={item.title}
+            user={item.user}
+            description={item.description}
+          </div>
+        ))}
+      </ul>
+    </div>
   );
 }
 
