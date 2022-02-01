@@ -8,14 +8,16 @@ function PictureList(props) {
     <div>
       <h2>{title}</h2>
       <ul>
-        {props.pictures.map((item) => (
-          <div key={item.id}>
-            image={item.image}
-            title={item.title}
-            user={item.user}
-            description={item.description}
-          </div>
-        ))}
+        {props.pictures.map((item) => {
+          return (
+            <div key={item.id}>
+              image={item.image}
+              title={item.title}
+              user={item.user}
+              description={item.description}
+            </div>
+          );
+        })}
       </ul>
     </div>
   );

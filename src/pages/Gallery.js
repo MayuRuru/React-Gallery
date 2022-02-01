@@ -18,7 +18,7 @@ const initialDb = [
   },
 ];
 
-const Gallery = () => {
+function Gallery() {
   const [pictures, setPictures] = useState([initialDb]);
 
   /*
@@ -40,10 +40,10 @@ const Gallery = () => {
   */
 
   return (
-    <div>
+    <section>
       <PictureList pictures={pictures} title="Gallery" />
-    </div>
+    </section>
   );
-};
+}
 
 export default Gallery;

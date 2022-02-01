@@ -1,12 +1,9 @@
-//import { FaTimes } from "react-icons/fa";
-import React from "react";
-
 function Picture(props) {
   return (
     <div>
       <li>
         <div>
-          <img src={props.image} />
+          <img src={props.image} alt={props.title} />
         </div>
 
         <div>
