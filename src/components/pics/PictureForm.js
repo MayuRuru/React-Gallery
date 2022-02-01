@@ -1,8 +1,17 @@
-//import { useState } from "react";
+import { useState } from "react";
 import styles from "./PictureForm.module.css";
 import Card from "../ui/Card";
 
 function PictureForm() {
+  const [title, setTitle] = useState("");
+  const [image, setImage] = useState("");
+  const [user, setUser] = useState("");
+  const [description, setDescription] = useState("");
+
+  function submitHandler(event) {
+    event.preventDefault();
+  }
+
   /*
 const AddPicture = ({ onAdd }) => {
 
@@ -25,7 +34,7 @@ const AddPicture = ({ onAdd }) => {
 
   return (
     <Card>
-      <form className={styles.form} onSubmit={onSubmit}>
+      <form className={styles.form} onSubmit={submitHandler}>
         <div className={styles.control}>
           <label htmlFor="title">Title</label>
           <input
