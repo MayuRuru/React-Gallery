@@ -1,18 +1,20 @@
+import styles from "./Picture.module.css";
+
 function Picture(props) {
   return (
-    <div>
-      <li>
-        <div>
-          <img src={props.image} alt={props.title} />
+    <li className={styles.item}>
+      <Card>
+        <div className={styles.image}>
+          <img src={props.image} />
         </div>
 
-        <div>
+        <div className={styles.content}>
           <h3>{props.title}</h3>
           <p>{props.user}</p>
           <p>{props.description}</p>
         </div>
-      </li>
-    </div>
+      </Card>
+    </li>
   );
 }
 
