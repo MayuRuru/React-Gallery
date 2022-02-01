@@ -1,8 +1,7 @@
 import PictureList from "../components/pics/PictureList";
-import pictures from "../assets/data/db.json";
+//import pictures from "../assets/data/db.json";
 
 function Gallery() {
-  /*
   const initialDb = [
     {
       id: 1,
@@ -19,11 +18,10 @@ function Gallery() {
       description: "description",
     },
   ];
-  */
 
   return (
     <section>
-      <PictureList pictures={pictures} title="Gallery" />
+      <PictureList pictures={initialDb} title="Gallery" />
     </section>
   );
 }
