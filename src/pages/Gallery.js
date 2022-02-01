@@ -1,5 +1,5 @@
-//import PictureList from "../components/PictureList";
-//import { useState } from "react";
+import PictureList from "../components/PictureList";
+import { useState } from "react";
 
 const initialDb = [
   {
@@ -35,12 +35,19 @@ const Gallery = () => {
   const deletePicture = (id) => {
     setPictures(pictures.filter((item) => item.id !== id));
   };
+
+  onDelete={deletePicture} 
   */
 
   return (
+    <div>
+      <PictureList pictures={pictures} />
+    </div>
+    /*
     <>
-      <PictureList pictures={pictures} onDelete={deletePicture} />
+      <PictureList pictures={pictures} />
     </>
+    */
   );
 };
 

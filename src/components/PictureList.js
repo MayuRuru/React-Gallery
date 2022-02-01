@@ -1,17 +1,15 @@
-import Picture from "./Picture";
+//import Picture from "./Picture";
 
 function PictureList(props) {
   return (
     <ul>
       {props.items.map((item) => (
-        <Picture
-          key={item.id}
-          id={item.id}
+        <div key={item.id}>
           image={item.image}
           title={item.title}
           user={item.user}
           description={item.description}
-        />
+        </div>
       ))}
     </ul>
   );
