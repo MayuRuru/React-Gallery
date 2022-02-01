@@ -2,7 +2,7 @@ import { useState } from "react";
 import styles from "./PictureForm.module.css";
 import Card from "../ui/Card";
 
-//function AddPicture(){}
+//function AddPicture(props){}
 
 const AddPicture = ({ onAdd }) => {
   const [title, setTitle] = useState("");
@@ -24,8 +24,8 @@ const AddPicture = ({ onAdd }) => {
   return (
     <Card>
       <form className={styles.form} onSubmit={onSubmit}>
-        <div>
-          <label>Title</label>
+        <div className={styles.control}>
+          <label htmlFor="title">Title</label>
           <input
             type="text"
             placeholder="Add title"
@@ -34,7 +34,8 @@ const AddPicture = ({ onAdd }) => {
           />
         </div>
 
-        <div>
+        <div className={styles.control}>
+          <label htmlFor="user">User</label>
           <label>Image</label>
           <input
             type="url"
@@ -44,8 +45,8 @@ const AddPicture = ({ onAdd }) => {
           />
         </div>
 
-        <div>
-          <label>User</label>
+        <div className={styles.control}>
+          <label htmlFor="user">User</label>
           <input
             type="text"
             placeholder="Taken by"
@@ -54,8 +55,8 @@ const AddPicture = ({ onAdd }) => {
           />
         </div>
 
-        <div>
-          <label>Description</label>
+        <div className={styles.control}>
+          <label htmlFor="description">Description</label>
           <input
             type="text"
             placeholder="Description"
@@ -64,7 +65,10 @@ const AddPicture = ({ onAdd }) => {
           />
         </div>
 
-        <input type="submit" value="Save Picture" />
+        <div className={styles.actions}>
+          <button>Add picture!</button>
+          <input type="submit" value="Save Picture" />
+        </div>
       </form>
     </Card>
   );
