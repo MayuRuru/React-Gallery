@@ -8,7 +8,7 @@ function PictureList(props) {
     <div>
       <h2>{title}</h2>
       <ul>
-        {props.items.map((item) => (
+        {props.pictures.map((item) => (
           <div key={item.id}>
             image={item.image}
             title={item.title}
