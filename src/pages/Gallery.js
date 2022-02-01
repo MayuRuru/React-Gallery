@@ -1,4 +1,4 @@
-import PictureList from "../components/PictureList";
+import PictureList from "../components/pics/PictureList";
 //import { useState } from "react";
 //const [pictures, setPictures] = useState([initialDb]);
 
