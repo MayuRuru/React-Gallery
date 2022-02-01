@@ -1,11 +1,12 @@
 import styles from "./Picture.module.css";
+import Card from "../ui/Card";
 
 function Picture(props) {
   return (
     <li className={styles.item}>
       <Card>
         <div className={styles.image}>
-          <img src={props.image} />
+          <img src={props.image} alt={props.image} />
         </div>
 
         <div className={styles.content}>
