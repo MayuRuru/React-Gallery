@@ -12,26 +12,6 @@ function PictureForm() {
     event.preventDefault();
   }
 
-  /*
-const AddPicture = ({ onAdd }) => {
-
-  const [title, setTitle] = useState("");
-  const [image, setImage] = useState("");
-  const [user, setUser] = useState("");
-  const [description, setDescription] = useState("");
-
-  const onSubmit = (e) => {
-    e.preventDefault();
-
-    onAdd({ title, image, user, description });
-
-    setTitle("");
-    setImage("");
-    setUser("");
-    setDescription("");
-  };
-  */
-
   return (
     <Card>
       <form className={styles.form} onSubmit={submitHandler}>
@@ -46,8 +26,7 @@ const AddPicture = ({ onAdd }) => {
         </div>
 
         <div className={styles.control}>
-          <label htmlFor="user">User</label>
-          <label>Image</label>
+          <label htmlFor="image">Image</label>
           <input
             type="url"
             placeholder="Add url"
@@ -78,7 +57,6 @@ const AddPicture = ({ onAdd }) => {
 
         <div className={styles.actions}>
           <button>Add picture!</button>
-          <input type="submit" value="Save Picture" />
         </div>
       </form>
     </Card>

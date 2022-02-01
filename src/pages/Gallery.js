@@ -1,13 +1,11 @@
 import PictureList from "../components/pics/PictureList";
-//import { useState } from "react";
-//const [pictures, setPictures] = useState([initialDb]);
 
 function Gallery() {
   const initialDb = [
     {
       id: 1,
       title: "Driving",
-      use: "Nesa",
+      user: "Nesa",
       image: "src/assets/img/foto1.jpg",
       description: "description",
     },
