@@ -1,5 +1,7 @@
 import { useState } from "react";
 
+//function AddPicture(){}
+
 const AddPicture = ({ onAdd }) => {
   const [title, setTitle] = useState("");
   const [image, setImage] = useState("");
