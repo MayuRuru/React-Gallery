@@ -1,6 +1,9 @@
 //import Picture from "./Picture";
 
 function PictureList(props) {
+  const pictures = props.pictures;
+  const title = props.title;
+
   return (
     <div>
       <h2>{title}</h2>

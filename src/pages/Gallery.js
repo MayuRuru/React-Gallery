@@ -43,23 +43,7 @@ const Gallery = () => {
     <div>
       <PictureList pictures={pictures} title="Gallery" />
     </div>
-    /*
-    <>
-      <PictureList pictures={pictures} />
-    </>
-    */
   );
 };
 
-/*
-
-const Gallery = () => {
-  return (
-    <div>
-      <h1>Hey</h1>
-    </div>
-  );
-};
-
-*/
 export default Gallery;
