@@ -1,11 +1,6 @@
 import Picture from "./Picture";
 import styles from "./PictureList.module.css";
 
-/*
-const pictures = props.pictures;
-  const title = props.title;
-*/
-
 function PictureList(props) {
   return (
     <ul className={styles.list}>
