@@ -26,7 +26,7 @@ function Gallery() {
 
   return (
     <section>
-      <PictureList pictures={initialDb} title="Gallery" />
+      <PictureList pictures={pictures} title="Gallery" />
     </section>
   );
 }
