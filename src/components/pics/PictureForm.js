@@ -11,8 +11,7 @@ function PictureForm() {
   function submitHandler(event) {
     event.preventDefault(); //method to PREVENT the browser default reaction from sending a HTTP request and reload the page
 
-    const newData = { title, image, user, description };
-    //new object to react to the submit
+    const newData = { title, image, user, description }; //new object to react to the submit
 
     fetch("http://localhost:8000/items", {
       method: "POST",
