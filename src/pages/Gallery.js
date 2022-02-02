@@ -1,9 +1,34 @@
 import PictureList from "../components/pics/PictureList";
-import data from "../assets/data/db.json";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function Gallery() {
-  const [pictures, setPictures] = useState([data]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedPics, setLoadedPics] = useState([]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch("http://localhost:8000/items")
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        setIsLoading(false);
+        setLoadedPics(data);
+      });
+  }, []);
+
+  /*there is no external dependencies here 
+except for Loading and setLoaded that are exceptions
+so the code will only run once and we do not have a infinite loop
+*/
+
+  if (isLoading) {
+    return (
+      <section>
+        <p>Loading...</p>
+      </section>
+    );
+  }
 
   /*
   const initialDb = [
@@ -26,7 +51,7 @@ function Gallery() {
 
   return (
     <section>
-      <PictureList pictures={pictures} title="Gallery" />
+      <PictureList pictures={loadedPics} title="Gallery" />
     </section>
   );
 }
