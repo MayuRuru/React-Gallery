@@ -27,7 +27,7 @@ const Crud = () => {
   };
 
   //las funciones anteriores se ejecuten en las hjas:
-  //CrudForm y Crud data reciben las props de la madre:
+  //CrudForm y CrudData reciben las props de la madre:
 
   return (
     <div>

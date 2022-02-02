@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import styles from "./PictureCrud.module.css";
+import styles from "./CrudForm.module.css";
 import Card from "../ui/Card";
 
 const initialForm = {
@@ -46,10 +46,10 @@ const CrudForm = (createData, updateData, dataToEdit, setDatatoEdit) => {
     handleReset();
   }
 
-  const handleReset = (e) => {
+  function handleReset(event) {
     setForm(initialForm);
     setDatatoEdit(null);
-  };
+  }
 
   return (
     <Card>
