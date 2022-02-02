@@ -1,9 +1,9 @@
 import PictureList from "../components/pics/PictureList";
-import pictures from "../assets/data/db.json";
+import data from "../assets/data/db.json";
+import { useState } from "react";
 
 function Gallery() {
-
-  const [pictures, setPictures] =
+  const [pictures, setPictures] = useState([data]);
 
   /*
   const initialDb = [
