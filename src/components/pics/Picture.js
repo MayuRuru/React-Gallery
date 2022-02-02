@@ -9,7 +9,7 @@ function Picture(props) {
       <Card>
         <div className={styles.image}>
           <img
-            src={require(`../assets/img/${props.image}`).default}
+            src={require(`../../assets/img/${props.image}`)}
             alt={props.image}
           />
         </div>
