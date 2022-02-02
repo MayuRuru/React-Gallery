@@ -22,12 +22,12 @@ const CrudForm = (createData, updateData, dataToEdit, setDatatoEdit) => {
   }, [dataToEdit]);
 
   //funcion que maneja el cambio de la variable vacia de form con el target del evento:
-  function handleChange(event) {
+  const handleChange = (event) => {
     setForm({
       ...form,
       [event.target.title]: event.target.value,
     });
-  }
+  };
 
   //funcion para que no haga nada hasta que cargue, es como una validacion:
   function submitHandler(event) {
