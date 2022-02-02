@@ -25,12 +25,12 @@ const CrudForm = (createData, updateData, dataToEdit, setDatatoEdit) => {
   const handleChange = (event) => {
     setForm({
       ...form,
-      [event.target.title]: event.target.value,
+      [event.target.name]: event.target.value,
     });
   };
 
   //funcion para que no haga nada hasta que cargue, es como una validacion:
-  function submitHandler(event) {
+  const submitHandler = (event) => {
     event.preventDefault();
 
     if (!form.title || !form.user || !form.image || !form.description) {
@@ -44,12 +44,12 @@ const CrudForm = (createData, updateData, dataToEdit, setDatatoEdit) => {
     }
 
     handleReset();
-  }
+  };
 
-  function handleReset(event) {
+  const handleReset = () => {
     setForm(initialForm);
     setDatatoEdit(null);
-  }
+  };
 
   return (
     <Card>
@@ -62,6 +62,7 @@ const CrudForm = (createData, updateData, dataToEdit, setDatatoEdit) => {
               type="text"
               placeholder="Add title"
               value={form.title}
+              name="title"
               onChange={handleChange}
             />
           </div>
@@ -72,6 +73,7 @@ const CrudForm = (createData, updateData, dataToEdit, setDatatoEdit) => {
               type="url"
               placeholder="Add url"
               value={form.image}
+              name="image"
               onChange={handleChange}
             />
           </div>
@@ -82,6 +84,7 @@ const CrudForm = (createData, updateData, dataToEdit, setDatatoEdit) => {
               type="text"
               placeholder="Taken by"
               value={form.user}
+              name="user"
               onChange={handleChange}
             />
           </div>
@@ -92,6 +95,7 @@ const CrudForm = (createData, updateData, dataToEdit, setDatatoEdit) => {
               type="text"
               placeholder="Description"
               value={form.description}
+              name="description"
               onChange={handleChange}
             />
           </div>
