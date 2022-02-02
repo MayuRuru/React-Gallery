@@ -9,7 +9,16 @@ function PictureForm() {
   const [description, setDescription] = useState("");
 
   function submitHandler(event) {
-    event.preventDefault();
+    event.preventDefault(); //method to PREVENT the browser default reaction from sending a HTTP request and reload the page
+
+    const newData = { title, image, user, description };
+    //new object to react to the submit
+
+    fetch("http://localhost:8000/items", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newData),
+    });
   }
 
   return (

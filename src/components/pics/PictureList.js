@@ -4,7 +4,7 @@ import styles from "./PictureList.module.css";
 function PictureList(props) {
   return (
     <ul className={styles.list}>
-      {props.pictures.map((item) => (
+      {props.pictures.map((item, index) => (
         <Picture
           key={item.id}
           item={item}
