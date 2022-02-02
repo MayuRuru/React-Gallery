@@ -1,14 +1,17 @@
 import styles from "./Picture.module.css";
 import Card from "../ui/Card";
 
-//src={require("../assets/img/${ props.image }.jpg").default}
+//src={require(`../assets/img/${ imgUrl }.jpg`).default}
 
 function Picture(props) {
   return (
     <li className={styles.item}>
       <Card>
         <div className={styles.image}>
-          <img src={props.image} alt={props.image} />
+          <img
+            src={require(`../assets/img/${imgUrl}`).default}
+            alt={props.image}
+          />
         </div>
 
         <div className={styles.content}>
