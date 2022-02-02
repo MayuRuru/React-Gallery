@@ -1,6 +1,4 @@
-//import { useState } from "react";
-
-import PictureCrud from "../components/pics/PictureCrud";
+import Crud from "../components/crud/CrudForm";
 import PictureForm from "../components/pics/PictureForm";
 
 function AddPicture() {
@@ -8,6 +6,7 @@ function AddPicture() {
     <section>
       <h1>Add New Picture:</h1>
       <PictureForm />
+      <Crud />
     </section>
   );
 }
