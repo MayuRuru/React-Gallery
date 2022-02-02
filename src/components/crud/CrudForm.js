@@ -10,7 +10,7 @@ const initialForm = {
   description: "",
 };
 
-const CrudForm = (createData, updateData, dataToEdit, setDatatoEdit) => {
+const CrudForm = ({ createData, updateData, dataToEdit, setDatatoEdit }) => {
   const [form, setForm] = useState(initialForm);
 
   useEffect(() => {

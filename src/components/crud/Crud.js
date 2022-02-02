@@ -3,10 +3,22 @@ import CrudData from "./CrudData";
 import CrudForm from "./CrudForm";
 
 const Crud = () => {
-  const [db, setDB] = useState(PictureList);
+  const [db, setDB] = useState([]);
   const [dataToEdit, setDatatoEdit] = useState(null); //permite o bien crear o bien editar
 
   const createData = (data) => {
+    fetch("http://localhost:8000/items", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(data),
+    })
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        console.log(data);
+      });
+
     data.id = Date.now(); //estampa del segundo en el que ejecutamos como si fuera un id
     setDB([...db, data]);
   };
