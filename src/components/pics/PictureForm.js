@@ -7,18 +7,22 @@ function PictureForm() {
   const [image, setImage] = useState("");
   const [user, setUser] = useState("");
   const [description, setDescription] = useState("");
+  const [isLoading, setIsLoading] = useState(false);
 
-  function submitHandler(event) {
+  const submitHandler = (event) => {
     event.preventDefault(); //method to PREVENT the browser default reaction from sending a HTTP request and reload the page
-
     const newData = { title, image, user, description }; //new object to react to the submit
+
+    setIsLoading(true);
 
     fetch("http://localhost:8000/items", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newData),
+    }).then(() => {
+      setIsLoading(false);
     });
-  }
+  };
 
   return (
     <Card>
@@ -64,7 +68,8 @@ function PictureForm() {
         </div>
 
         <div className={styles.actions}>
-          <button>Add picture!</button>
+          {!isLoading && <button>Add picture!</button>}
+          {isLoading && <button disabled>Adding...</button>}
         </div>
       </form>
     </Card>

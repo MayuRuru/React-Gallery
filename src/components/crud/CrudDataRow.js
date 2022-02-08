@@ -1,14 +1,14 @@
 import React from "react";
 
-const CrudDataRow = ({ el, setDatatoEdit, deleteData }) => {
+const CrudDataRow = ({ item, setDatatoEdit, deleteData }) => {
   //recibe las propiedades de la madre
 
-  let { title, date, id } = el;
+  let { title, user, id } = item;
 
   return (
     <tr>
-      <td>{el.title}</td>
-      <td>{el.date}</td>
+      <td>{item.title}</td>
+      <td>{item.user}</td>
       <td>
         <button onClick={() => setDatatoEdit(el)}>Edit</button>
         <button onClick={() => deleteData(id)}>Delete</button>

@@ -7,9 +7,10 @@ const CrudData = ({ data, setDataToEdit, deleteData }) => {
       <table>
         <thead>
           <tr>
-            <th>Place</th>
-            <th>Date</th>
-            <th>Actions</th>
+            <th>title</th>
+            <th>image</th>
+            <th>user</th>
+            <th>description</th>
           </tr>
         </thead>
         <tbody>
@@ -18,10 +19,10 @@ const CrudData = ({ data, setDataToEdit, deleteData }) => {
               <td colSpan="3">No data</td>
             </tr>
           ) : (
-            data.map((el) => (
+            data.map((item) => (
               <CrudDataRow
-                key={el.id}
-                el={el}
+                key={item.id}
+                item={item}
                 setDataToEdit={setDataToEdit}
                 deleteData={deleteData}
               />
