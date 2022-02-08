@@ -15,6 +15,9 @@ function Navbar() {
           <li>
             <Link to="/new">Add picture</Link>
           </li>
+          <li>
+            <Link to="/crud">CRUD</Link>
+          </li>
         </ul>
       </nav>
     </header>

@@ -1,4 +1,5 @@
-import PictureList from "../pics/PictureList";
+import { useEffect } from "react";
+import { helpHttp } from "../../helpers/helpHttp";
 import CrudData from "./CrudData";
 import CrudForm from "./CrudForm";
 
@@ -6,13 +7,23 @@ const Crud = () => {
   const [db, setDB] = useState([]);
   const [dataToEdit, setDatatoEdit] = useState(null); //permite o bien crear o bien editar
 
-  const createData = (data) => {
-    fetch("http://localhost:8000/items").then((response) => {
-      console.log(response);
-    });
+  let api = helpHttp();
+  let endpoint = " http://localhost:8000/items";
 
-    //data.id = Date.now(); //estampa del segundo en el que ejecutamos como si fuera un id
-    //setDB([...db, data]);
+  useEffect(() => {
+    api.get(endpoint).then((res) => {
+      //console.log(res);
+      if (!res.err) {
+        setDB(res);
+      } else {
+        setDB(null);
+      }
+    });
+  }, [...db]);
+
+  const createData = (data) => {
+    data.id = Date.now(); //estampa del segundo en el que ejecutamos como si fuera un id
+    setDB([...db, data]);
   };
 
   const updateData = (data) => {
@@ -42,6 +53,8 @@ const Crud = () => {
         dataToEdit={dataToEdit}
         setDatatoEdit={setDatatoEdit}
       />
+
+      <h3>DataBase:</h3>
       <CrudData
         data={db}
         setDatatoEdit={setDatatoEdit}
