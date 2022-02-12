@@ -21,6 +21,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDatatoEdit }) => {
     }
   }, [dataToEdit]);
 
+  //clase 22 de formularios!
   //funcion que maneja el cambio de la variable vacia de form con el target del evento:
   const handleChange = (event) => {
     setForm({
@@ -30,7 +31,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDatatoEdit }) => {
   };
 
   //funcion para que no haga nada hasta que cargue, es como una validacion:
-  const submitHandler = (event) => {
+  const handleSubmit = (event) => {
     event.preventDefault();
 
     if (!form.title || !form.user || !form.image || !form.description) {
@@ -55,7 +56,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDatatoEdit }) => {
     <Card>
       <div>
         <h3>{dataToEdit ? "Edit" : "Add"}</h3>
-        <form className={styles.form} onSubmit={submitHandler}>
+        <form className={styles.form} onSubmit={handleSubmit}>
           <div className={styles.control}>
             <label htmlFor="title">Title</label>
             <input
@@ -101,7 +102,7 @@ const CrudForm = ({ createData, updateData, dataToEdit, setDatatoEdit }) => {
           </div>
 
           <div className={styles.actions}>
-            <button onClick={submitHandler}>Add!</button>
+            <button onClick={handleSubmit}>Add!</button>
             <button onClick={handleReset}>Reset!</button>
           </div>
         </form>

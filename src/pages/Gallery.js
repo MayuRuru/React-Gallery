@@ -1,10 +1,12 @@
 import PictureList from "../components/pics/PictureList";
 import { useState, useEffect } from "react";
+import axios from "axios";
 
 function Gallery() {
   const [isLoading, setIsLoading] = useState(true);
   const [loadedPics, setLoadedPics] = useState([]);
 
+  /*
   useEffect(() => {
     setTimeout(() => {
       setIsLoading(true);
@@ -18,6 +20,14 @@ function Gallery() {
         });
     }, 1000);
   }, []);
+*/
+
+  useEffect(() => {
+    setIsLoading(false);
+    axios.get("http://localhost:8000/items").then((response) => {
+      setLoadedPics(response.data);
+    });
+  }, [setIsLoading]);
 
   /*there is no external dependencies here 
 except for Loading and setLoaded that are exceptions

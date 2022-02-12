@@ -1,6 +1,15 @@
 import CrudDataRow from "./CrudDataRow";
+import { fakeApi } from "../../assets/data/fakeapi";
+import { useState, useEffect } from "react";
 
-const CrudData = ({ data, setDataToEdit, deleteData }) => {
+//{ data, setDataToEdit, deleteData }
+
+const CrudData = ({ setDataToEdit, deleteData }) => {
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    setData(fakeApi());
+  });
+
   return (
     <div>
       <h3>DataBase</h3>

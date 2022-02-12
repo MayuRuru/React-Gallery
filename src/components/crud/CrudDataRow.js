@@ -1,4 +1,5 @@
 import React from "react";
+import data from "../../assets/data/db.json";
 
 const CrudDataRow = ({ item, setDatatoEdit, deleteData }) => {
   //recibe las propiedades de la madre
@@ -7,10 +8,10 @@ const CrudDataRow = ({ item, setDatatoEdit, deleteData }) => {
 
   return (
     <tr>
-      <td>{item.title}</td>
-      <td>{item.user}</td>
+      <td>{title}</td>
+      <td>{user}</td>
       <td>
-        <button onClick={() => setDatatoEdit(el)}>Edit</button>
+        <button onClick={() => setDatatoEdit(item)}>Edit</button>
         <button onClick={() => deleteData(id)}>Delete</button>
       </td>
     </tr>
