@@ -1,12 +1,15 @@
-import { useEffect } from "react";
-import { helpHttp } from "../../helpers/helpHttp";
+import { useState, useEffect } from "react";
+//import { helpHttp } from "../../helpers/helpHttp";
 import CrudData from "./CrudData";
 import CrudForm from "./CrudForm";
+//import data from "../../assets/data/db.json";
+import { fakeApi } from "../../assets/data/fakeapi";
 
 const Crud = () => {
-  const [db, setDB] = useState([]);
+  const [db, setDB] = useState([]); //AQUI QUE LE PONGO??????!!!!!!!!
   const [dataToEdit, setDatatoEdit] = useState(null); //permite o bien crear o bien editar
 
+  /*
   let api = helpHttp();
   let endpoint = " http://localhost:8000/items";
 
@@ -20,6 +23,7 @@ const Crud = () => {
       }
     });
   }, [...db]);
+  */
 
   const createData = (data) => {
     data.id = Date.now(); //estampa del segundo en el que ejecutamos como si fuera un id
@@ -27,14 +31,14 @@ const Crud = () => {
   };
 
   const updateData = (data) => {
-    let newData = db.map((el) => (el.id === data.id ? data : el));
+    let newData = db.map((item) => (item.id === data.id ? data : item));
     setDB(newData);
   };
 
   const deleteData = (id) => {
     let isDelete = window.confirm(`Are you sure to delete this:'${id}'?`);
     if (isDelete) {
-      let newData = db.filter((el) => el.id !== id);
+      let newData = db.filter((item) => item.id !== id);
       setDB(newData);
     } else {
       return;
