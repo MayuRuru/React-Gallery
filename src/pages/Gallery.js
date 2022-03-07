@@ -48,4 +48,19 @@ so the code will only run once and we do not have a infinite loop
   );
 }
 
+
+
+
+
+
+
+//  handleDelete={handleDelete}
+
+/*
+const handleDelete = (id) => {
+    const newPictures = items.filter(item => item.id) !== id);
+    setPictures(newPictures);
+}
+*/
+
 export default Gallery;

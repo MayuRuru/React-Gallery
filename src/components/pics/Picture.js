@@ -21,4 +21,17 @@ function Picture(props) {
   );
 }
 
+//<button onClick={handleClick}>delete</button>
+
+/*
+ const { data: item } = fetch("http://localhost:8000/items" + id);
+
+  const handleClick = () => {
+    fetch("http://localhost:8000/items" + item.id, {
+      method: "DELETE",
+    });
+  };
+
+*/
+
 export default Picture;

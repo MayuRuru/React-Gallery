@@ -2,7 +2,7 @@ import { Route, Routes } from "react-router-dom";
 import Layout from "./components/ui/Layout";
 import Gallery from "./pages/Gallery";
 import AddPicture from "./pages/AddPicture";
-import Crud from "./components/crud/Crud";
+import Crud from "./pages/Crud";
 
 function App() {
   return (
